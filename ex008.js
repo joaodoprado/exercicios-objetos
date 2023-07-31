@@ -20,12 +20,17 @@ const usuarios = [
         pets: ["Naninha"],
     },
 ]
+const pets = usuarios
 
-let contador = 0
-let i = 0
-const [nome, pets] = usuarios
 
-for (pessoa of usuarios) {
-console.log(nome[i])
-i++
+for(pessoa of usuarios) {
+    const {nome, pets} = pessoa
+    let contador = pets.length 
+    if (contador == 0) {
+        console.log(`Sou ${nome} e não tenho pets`)
+    } else if (contador == 1) {
+        console.log(`Sou ${nome} e tenho ${contador} pet`)
+    } else {
+        console.log(`Sou ${nome} e tenho ${contador} pets`)
+    }
 }
