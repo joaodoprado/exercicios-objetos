@@ -22,10 +22,10 @@ const usuarios = [
 ]
 
 let contador = 0
-
-
+let i = 0
+const [nome, pets] = usuarios
 
 for (pessoa of usuarios) {
-    console.log(pessoa.pets)
-    contador++
+console.log(nome[i])
+i++
 }
